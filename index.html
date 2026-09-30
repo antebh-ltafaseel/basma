@@ -70,7 +70,7 @@ footer b i{font-style:normal;color:var(--green)}
     </div>
     <div class="eyebrow">انتبه للتفاصيل · أكتوبر 2026</div>
     <h1>لقيت البصمة؟ <span class="tag">سجّلها</span></h1>
-    <p class="sub">اكتب الرمز اللي جنب البصمة المخفية. كل بصمة صحيحة = فرصة في الجائزة الخاصة.</p>
+    <p class="sub">اكتب الرمز اللي جنب البصمة المخفية. كل بصمة صحيحة = فرصة بدخولك عجلة الحظ بالمعرض الختامي.</p>
   </header>
 
   <p class="loading" id="loading">لحظة...</p>
@@ -99,8 +99,7 @@ footer b i{font-style:normal;color:var(--green)}
 
   <div class="card done" id="done" role="status">
     <div class="big" id="doneCode"></div>
-    <h2>انحسبت لك البصمة!</h2>
-    <p>رصيدك الحين: <b id="total">0</b> بصمة</p>
+    <h2>انسجلت بصمتك!</h2>
     <p>ركّز في البوست الجاي، فيه بصمة ثانية.</p>
     <button type="button" id="again">سجّل بصمة ثانية</button>
   </div>
@@ -171,7 +170,6 @@ footer b i{font-style:normal;color:var(--green)}
         busy(false);
         if (!res || !res.ok) { showError((res && res.message) || 'صار خطأ. جرّب مرة ثانية.'); return; }
         $('doneCode').textContent = res.code;
-        $('total').textContent = res.total;
         $('form').hidden = true;
         $('done').classList.add('on');
       })
